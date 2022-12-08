@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #0000;
+  --secondary-color: #0000;
+  --accent-color: #0000;
+  --font-size-reg:1rem;
+  --font-size-medium:2rem;
+  --font-size-large:3rem;
+  --font-size-display:5rem;
+  --spacing-reg: 1em;
+  --spacing-medium: 2em;
+  --spacing-large: 3em;
+  --spacing-xl:5em;
+}
+
+/*# sourceMappingURL=style.css.map */

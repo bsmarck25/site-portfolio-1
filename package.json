@@ -1,0 +1,23 @@
+{
+  "name": "site-portfolio-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsmarck25/site-portfolio-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bsmarck25/site-portfolio-1/issues"
+  },
+  "homepage": "https://github.com/bsmarck25/site-portfolio-1#readme",
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}
