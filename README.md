@@ -1,2 +1,2 @@
 # site-portfolio-1
-Commissioned projec: Portfolio Site
+Commissioned project: Portfolio Site
