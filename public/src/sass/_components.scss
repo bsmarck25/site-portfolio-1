@@ -1,0 +1,35 @@
+/*
+    > Navigation
+    > card
+    > footer 
+    > section
+
+*/
+@use 'globals';
+
+
+body{
+    background: var(--primary-color);
+}
+.profile-image {
+     position: relative; 
+     width: 24.5625em; 
+     height: 24.5625em; 
+     overflow: hidden; 
+     border-radius: 50%;
+} 
+.img-holder-profile{ 
+    width: 100%; 
+    height: auto; 
+}
+
+h1{
+    font-size: var(--font-size-display);
+    max-width: 462px;
+}
+h3{
+    font-size: var(--font-size-xl);
+}
+.highlighted{
+    color:var(--accent-color-main);
+}

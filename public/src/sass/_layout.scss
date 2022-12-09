@@ -1,0 +1,53 @@
+/*
+    > Grid
+    > flex
+    > containers
+*/
+@use 'globals';
+
+.page-navigation{
+    background:var(--primary-color);
+    padding: var(--spacing-medium);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    
+  
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: var(--spacing-medium);
+    
+        a{
+            text-decoration: none;
+            color:var(--accent-color-util);
+        }
+    }
+    
+}
+
+
+.profile-sec{
+    display:flex;
+    justify-content: center;
+    min-height: 100vh;
+
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: var(--spacing-large);
+        gap: 7.875em;
+
+        ul{
+            list-style: none;
+            display: flex;
+            gap: var(--spacing-medium);
+            margin-top: var(--spacing-xxl);
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}

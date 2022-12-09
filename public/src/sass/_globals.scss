@@ -6,18 +6,34 @@ $var-accent-color: #0000;
 
 
 :root{
-    --primary-color: #0000; 
-    --secondary-color: #0000;
-    --accent-color: #0000;
+    --primary-color: #202020; 
+    --secondary-color: #EBEBEB;
+    --accent-color-main: #FF7417;
+    --accent-color-util: #999999;
 
     --font-size-reg:1rem;
-    --font-size-medium:2rem;
-    --font-size-large:3rem;
-    --font-size-display:5rem;
+    --font-size-medium:1.333rem;
+    --font-size-large:1.777rem;
+    --font-size-xl:2.369rem;
+    --font-size-xxl:3.157rem;
+    --font-size-display:4.209rem;
 
     --spacing-reg: 1em;
     --spacing-medium: 2em;
     --spacing-large: 3em;
-    --spacing-xl:5em;
+    --spacing-xl: 3em;
+    --spacing-xxl:5em;
 
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: var(--secondary-color);
+}
+html{
+    width: 100%;
+    height: 100%;
 }
