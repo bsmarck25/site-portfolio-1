@@ -18,18 +18,19 @@ $var-accent-color: #0000;
     --font-size-xxl:3.157rem;
     --font-size-display:4.209rem;
 
-    --spacing-reg: 1em;
-    --spacing-medium: 2em;
-    --spacing-large: 3em;
-    --spacing-xl: 3em;
-    --spacing-xxl:5em;
+    --spacing-sm: 1em;
+    --spacing-reg: 2em;
+    --spacing-medium: 4em;
+    --spacing-large: 6em;
+    --spacing-xl: 8em;
+    --spacing-xxl:10em;
 
 }
 *{
     padding:0;
     margin:0;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 100%;
     font-family: sans-serif;
     color: var(--secondary-color);
 }

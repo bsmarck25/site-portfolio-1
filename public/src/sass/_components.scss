@@ -10,6 +10,11 @@
 
 body{
     background: var(--primary-color);
+    &>div{
+        padding-left: var(--spacing-xl);
+    min-height: 100vh;
+    padding-right: var(--spacing-xl);
+    }
 }
 .profile-image {
      position: relative; 
@@ -32,4 +37,105 @@ h3{
 }
 .highlighted{
     color:var(--accent-color-main);
+}
+ul{
+    a{
+        text-decoration: none;
+        color:var(--accent-color-util);          
+        &:hover{
+            color:var(--accent-color-main);
+                
+        }
+    }
+}
+.introduction p{
+    font-size: var(--font-size-medium);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.profile-sec{
+    .icon-holder-socials i {
+        font-size: var(--font-size-xl);
+        color:var(--accent-color-util);
+        &:hover{
+            color:var(--accent-color-main);
+            
+        }
+    }
+}
+.card{
+    &-skills{
+        h5{
+            margin-top: var(--spacing-sm);
+            font-weight: 300;
+            font-size: var(--font-size-medium);
+            color: var(--accent-color-util);
+        }
+       
+    }
+    &-expertise{
+        cursor: pointer;
+        i{
+
+            font-size: var(--font-size-display);
+        }
+        h5{
+            font-size: var(--font-size-medium);
+            margin-top: var(--spacing-sm);
+            color: var(--accent-color-util);
+            font-weight: 300;
+
+        }
+        &:hover i {
+            color:var(--accent-color-main);
+        }
+    }
+}
+
+form{
+    margin-top: var(--spacing-reg);
+
+    input[type="text"]{
+        min-width: 80ch;
+        &:focus-within{
+            outline: 1.5px solid var(--accent-color-main);
+        }
+
+    }
+    & > input,textarea,button{
+        display: block;
+        border:none;
+        outline:1px var(--accent-color-main);
+        border-radius: 4px;
+        padding:var(--spacing-sm);
+        background:none;
+
+    }
+    & input:not([type="submit"]){
+        border: 1px solid var(--accent-color-util);
+    }
+    
+    textarea{
+        resize: none;
+        border: 1px solid var(--accent-color-util);
+        min-width: 80ch;
+        min-height: 25ch;
+        &:focus-within{
+            outline: 1.5px solid var(--accent-color-main);
+        }
+
+        margin-block: var(--spacing-sm);
+    }
+    button[type="submit"]{
+        cursor: pointer;
+        float: right;
+        color:var(--secondary-color);
+        font-weight: 600;
+        background:var(--accent-color-main);
+        i{
+        color:var(--secondary-color);
+            margin-right: 0.4em;
+        }
+    }
 }

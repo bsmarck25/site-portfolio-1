@@ -9,18 +9,19 @@
   --font-size-xl:2.369rem;
   --font-size-xxl:3.157rem;
   --font-size-display:4.209rem;
-  --spacing-reg: 1em;
-  --spacing-medium: 2em;
-  --spacing-large: 3em;
-  --spacing-xl: 3em;
-  --spacing-xxl:5em;
+  --spacing-sm: 1em;
+  --spacing-reg: 2em;
+  --spacing-medium: 4em;
+  --spacing-large: 6em;
+  --spacing-xl: 8em;
+  --spacing-xxl:10em;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 100%;
   font-family: sans-serif;
   color: var(--secondary-color);
 }
@@ -37,7 +38,7 @@ html {
 */
 .page-navigation {
   background: var(--primary-color);
-  padding: var(--spacing-medium);
+  padding: var(--spacing-reg);
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -47,10 +48,6 @@ html {
   display: flex;
   justify-content: center;
   gap: var(--spacing-medium);
-}
-.page-navigation ul a {
-  text-decoration: none;
-  color: var(--accent-color-util);
 }
 
 .profile-sec {
@@ -68,11 +65,104 @@ html {
 .profile-sec .wrapper ul {
   list-style: none;
   display: flex;
-  gap: var(--spacing-medium);
-  margin-top: var(--spacing-xxl);
+  gap: var(--spacing-reg);
+  margin-top: var(--spacing-large);
 }
 .profile-sec .wrapper ul a {
   text-decoration: none;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.introduction p {
+  margin-top: var(--spacing-reg);
+  max-width: 70ch;
+}
+
+.skills-expertise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.skills-expertise .column-section {
+  display: flex;
+  flex-direction: column;
+}
+.skills-expertise .column-section .partition:nth-of-type(1) {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-reg);
+  border-bottom: 1px solid var(--accent-color-util);
+  padding-block: var(--spacing-medium);
+}
+.skills-expertise .column-section .partition:nth-of-type(2) {
+  gap: var(--spacing-reg);
+  display: grid;
+  padding-top: var(--spacing-medium);
+  padding-bottom: var(--spacing-reg);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.skills-expertise .column-section .partition .card-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skills-expertise .column-section .partition .card-expertise {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.education h3 {
+  text-align: center;
+}
+.education section {
+  margin-top: var(--spacing-reg);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-medium);
+}
+.education section .card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-reg);
+}
+.education section .card div {
+  line-height: 1.5;
+}
+.education section .card div h4 {
+  font-size: var(--font-size-medium);
+}
+.education section .card div p {
+  color: var(--accent-color-util);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  padding: var(--spacing-reg);
+}
+footer * {
+  color: var(--accent-color-util);
 }
 
 /*
@@ -84,6 +174,11 @@ html {
 */
 body {
   background: var(--primary-color);
+}
+body > div {
+  padding-left: var(--spacing-xl);
+  min-height: 100vh;
+  padding-right: var(--spacing-xl);
 }
 
 .profile-image {
@@ -110,6 +205,92 @@ h3 {
 
 .highlighted {
   color: var(--accent-color-main);
+}
+
+ul a {
+  text-decoration: none;
+  color: var(--accent-color-util);
+}
+ul a:hover {
+  color: var(--accent-color-main);
+}
+
+.introduction p {
+  font-size: var(--font-size-medium);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.profile-sec .icon-holder-socials i {
+  font-size: var(--font-size-xl);
+  color: var(--accent-color-util);
+}
+.profile-sec .icon-holder-socials i:hover {
+  color: var(--accent-color-main);
+}
+
+.card-skills h5 {
+  margin-top: var(--spacing-sm);
+  font-weight: 300;
+  font-size: var(--font-size-medium);
+  color: var(--accent-color-util);
+}
+.card-expertise {
+  cursor: pointer;
+}
+.card-expertise i {
+  font-size: var(--font-size-display);
+}
+.card-expertise h5 {
+  font-size: var(--font-size-medium);
+  margin-top: var(--spacing-sm);
+  color: var(--accent-color-util);
+  font-weight: 300;
+}
+.card-expertise:hover i {
+  color: var(--accent-color-main);
+}
+
+form {
+  margin-top: var(--spacing-reg);
+}
+form input[type=text] {
+  min-width: 80ch;
+}
+form input[type=text]:focus-within {
+  outline: 1.5px solid var(--accent-color-main);
+}
+form > input, form textarea, form button {
+  display: block;
+  border: none;
+  outline: 1px var(--accent-color-main);
+  border-radius: 4px;
+  padding: var(--spacing-sm);
+  background: none;
+}
+form input:not([type=submit]) {
+  border: 1px solid var(--accent-color-util);
+}
+form textarea {
+  resize: none;
+  border: 1px solid var(--accent-color-util);
+  min-width: 80ch;
+  min-height: 25ch;
+  margin-block: var(--spacing-sm);
+}
+form textarea:focus-within {
+  outline: 1.5px solid var(--accent-color-main);
+}
+form button[type=submit] {
+  cursor: pointer;
+  float: right;
+  color: var(--secondary-color);
+  font-weight: 600;
+  background: var(--accent-color-main);
+}
+form button[type=submit] i {
+  color: var(--secondary-color);
+  margin-right: 0.4em;
 }
 
 /*# sourceMappingURL=style.css.map */
