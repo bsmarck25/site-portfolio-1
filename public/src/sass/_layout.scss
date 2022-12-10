@@ -6,27 +6,55 @@
 @use "globals";
 
 .page-navigation {
-    // display: none;
+    //mobile first
+
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 10;
-    ul {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        gap: var(--spacing-medium);
-        padding: var(--spacing-medium);
+    background: var(--primary-color);
+    background: red;
+    display: flex;
+    align-items: center;
+    .wrapper {
         background: var(--primary-color);
+        height: inherit;
+        padding: var(--spacing-reg);
+        width: inherit;
+        display: flex;
+        position: relative;
+        ul {
+            position: absolute;
+            background: var(--primary-color);
+            left: 0;
+            top: 100%;
+            box-shadow: 5px 0px 4px 0px rgba(0,0,0,0.31);
+            padding: var(--spacing-reg);
+            height: 100vh;
+            list-style: none;
+            li{
+                padding:var(--spacing-reg);
+            }
+        }
+        i {
+            font-size: var(--font-size-xl);
+        }
+        .toggler {
+            align-self: flex-end;
+            float: right;
+        }
     }
+}
+.hide {
+    display: none !important;
 }
 .toggle-nav {
     position: sticky;
-    top:0;
+    top: 0;
     display: none;
     cursor: pointer;
-    padding:var(--spacing-sm);
-    background:var(--primary-color);
+    padding: var(--spacing-sm);
+    background: var(--primary-color);
     z-index: 911;
     text-align: right;
     i {

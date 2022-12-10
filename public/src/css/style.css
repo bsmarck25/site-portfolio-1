@@ -172,14 +172,42 @@ form button[type=submit] i {
   top: 0;
   width: 100%;
   z-index: 10;
-}
-.page-navigation ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  gap: var(--spacing-medium);
-  padding: var(--spacing-medium);
   background: var(--primary-color);
+  background: red;
+  display: flex;
+  align-items: center;
+}
+.page-navigation .wrapper {
+  background: var(--primary-color);
+  height: inherit;
+  padding: var(--spacing-reg);
+  width: inherit;
+  display: flex;
+  position: relative;
+}
+.page-navigation .wrapper ul {
+  position: absolute;
+  background: var(--primary-color);
+  left: 0;
+  top: 100%;
+  box-shadow: 5px 0px 4px 0px rgba(0, 0, 0, 0.31);
+  padding: var(--spacing-reg);
+  height: 100vh;
+  list-style: none;
+}
+.page-navigation .wrapper ul li {
+  padding: var(--spacing-reg);
+}
+.page-navigation .wrapper i {
+  font-size: var(--font-size-xl);
+}
+.page-navigation .wrapper .toggler {
+  align-self: flex-end;
+  float: right;
+}
+
+.hide {
+  display: none !important;
 }
 
 .toggle-nav {
@@ -348,23 +376,22 @@ footer * {
     width: 100%;
   }
 }
-@media (max-width: 800px) {
-  .page-navigation {
-    position: relative;
+@media (min-width: 801px) {
+  .page-navigation .wrapper {
+    padding: var(--spacing-sm);
+  }
+  .page-navigation .wrapper #toggleNav {
     display: none;
   }
-  .page-navigation ul {
-    height: 100vh;
-    position: fixed;
-    box-shadow: 1px 2px 14px 0px rgba(0, 0, 0, 0.4);
-    top: 0;
-    right: 0;
-    flex-direction: column;
-    background: var(--primary-color);
-  }
-
-  .toggle-nav {
-    display: block;
+  .page-navigation .wrapper #pageNav {
+    padding: 0;
+    position: static;
+    height: auto;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    width: 100%;
+    margin: 0 auto;
+    display: flex !important;
+    justify-content: center;
   }
 }
 
