@@ -6,17 +6,31 @@
 @use "globals";
 
 .page-navigation {
-    background: var(--primary-color);
-    padding: var(--spacing-reg);
-    position: fixed;
+    // display: none;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 10;
-
     ul {
-        list-style: none;
         display: flex;
         justify-content: center;
+        list-style: none;
         gap: var(--spacing-medium);
+        padding: var(--spacing-reg);
+        background: var(--primary-color);
+    }
+}
+.toggle-nav {
+    position: sticky;
+    top:0;
+    display: none;
+    cursor: pointer;
+    padding:var(--spacing-sm);
+    background:var(--primary-color);
+    z-index: 911;
+    text-align: right;
+    i {
+        font-size: var(--font-size-xl);
     }
 }
 
@@ -28,10 +42,10 @@
     .wrapper {
         display: flex;
         justify-content: center;
-        align-items: center;
-        margin-top: var(--spacing-large);
+        margin-top: var(--spacing-medium);
         gap: 7.875em;
-
+        h3 {
+        }
         ul {
             list-style: none;
             display: flex;
@@ -47,6 +61,7 @@
 .introduction {
     display: flex;
     flex-direction: column;
+    padding-block: var(--spacing-large);
     justify-content: center;
     align-items: center;
     p {
@@ -58,9 +73,11 @@
 .skills-expertise {
     display: flex;
     flex-direction: column;
+    padding-block: var(--spacing-large);
     align-items: center;
     justify-content: center;
     h3 {
+        text-align: center;
     }
     .column-section {
         display: flex;
@@ -79,13 +96,11 @@
                 padding-top: var(--spacing-medium);
                 padding-bottom: var(--spacing-reg);
                 grid-template-columns: repeat(3, minmax(0, 1fr));
-
             }
             .card {
                 &-skills {
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
                     align-items: center;
                 }
                 &-expertise {
@@ -99,50 +114,51 @@
     }
 }
 
-.education{
+.education {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-block: var(--spacing-large);
     align-items: center;
-    h3{
+    h3 {
         text-align: center;
     }
-    section{
+    section {
         margin-top: var(--spacing-reg);
-        display:grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap:var(--spacing-medium);
-        .card{
+        display: grid;
+        gap: var(--spacing-medium);
+
+        // flex-wrap: wrap;
+
+        .card {
             display: flex;
             align-items: center;
-            gap:var(--spacing-reg);
-            div{
+
+            gap: var(--spacing-reg);
+            div {
                 line-height: 1.5;
-                h4{
+                h4 {
                     font-size: var(--font-size-medium);
                 }
-                p{
-                    color:var(--accent-color-util);
+                p {
+                    color: var(--accent-color-util);
                 }
             }
         }
-
     }
 }
-.contact{
+.contact {
     display: flex;
+    padding-block: var(--spacing-large);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
 }
 
-footer{
+footer {
     text-align: center;
-    padding:var(--spacing-reg);
-    *{
-    color:var(--accent-color-util);
-
+    padding: var(--spacing-reg);
+    * {
+        color: var(--accent-color-util);
     }
 }

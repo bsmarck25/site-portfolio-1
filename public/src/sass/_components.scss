@@ -5,136 +5,132 @@
     > section
 
 */
-@use 'globals';
+@use "globals";
 
-
-body{
+body {
+    position: relative;
     background: var(--primary-color);
-    &>div{
-        padding-left: var(--spacing-xl);
-    min-height: 100vh;
-    padding-right: var(--spacing-xl);
+    & > div {
+        padding-inline: var(--spacing-reg);
+        padding-block: var(--spacing-reg);
     }
 }
 .profile-image {
-     position: relative; 
-     width: 24.5625em; 
-     height: 24.5625em; 
-     overflow: hidden; 
-     border-radius: 50%;
-} 
-.img-holder-profile{ 
-    width: 100%; 
-    height: auto; 
+    position: relative;
+    width: 24.5625em;
+    height: 24.5625em;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.img-holder-profile {
+    width: 100%;
+    height: auto;
 }
 
-h1{
+h1 {
     font-size: var(--font-size-display);
     max-width: 462px;
 }
-h3{
+h3 {
     font-size: var(--font-size-xl);
 }
-.highlighted{
-    color:var(--accent-color-main);
+.highlighted {
+    color: var(--accent-color-main);
 }
-ul{
-    a{
+ul {
+    a {
         text-decoration: none;
-        color:var(--accent-color-util);          
-        &:hover{
-            color:var(--accent-color-main);
-                
+        color: var(--accent-color-util);
+        &:hover {
+            color: var(--accent-color-main);
         }
     }
 }
-.introduction p{
+.introduction p {
     font-size: var(--font-size-medium);
     text-align: center;
     line-height: 1.5;
 }
 
-.profile-sec{
+.profile-sec {
     .icon-holder-socials i {
         font-size: var(--font-size-xl);
-        color:var(--accent-color-util);
-        &:hover{
-            color:var(--accent-color-main);
-            
+        color: var(--accent-color-util);
+        &:hover {
+            color: var(--accent-color-main);
         }
     }
 }
-.card{
-    &-skills{
-        h5{
+.card {
+    &-skills {
+        h5 {
             margin-top: var(--spacing-sm);
             font-weight: 300;
+            text-align: center;
             font-size: var(--font-size-medium);
             color: var(--accent-color-util);
         }
-       
     }
-    &-expertise{
+    &-expertise {
+        text-align: center;
         cursor: pointer;
-        i{
-
+        i {
             font-size: var(--font-size-display);
         }
-        h5{
+        h5 {
             font-size: var(--font-size-medium);
             margin-top: var(--spacing-sm);
             color: var(--accent-color-util);
             font-weight: 300;
-
         }
         &:hover i {
-            color:var(--accent-color-main);
+            color: var(--accent-color-main);
         }
     }
 }
 
-form{
+form {
     margin-top: var(--spacing-reg);
-
-    input[type="text"]{
-        min-width: 80ch;
-        &:focus-within{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    input[type="text"] {
+        &:focus-within {
             outline: 1.5px solid var(--accent-color-main);
         }
-
     }
-    & > input,textarea,button{
-        display: block;
-        border:none;
-        outline:1px var(--accent-color-main);
+    & > input,
+    textarea,
+    button {
+        border: none;
+        outline: 1px var(--accent-color-main);
         border-radius: 4px;
-        padding:var(--spacing-sm);
-        background:none;
-
+        padding: var(--spacing-sm);
+        background: none;
     }
-    & input:not([type="submit"]){
+    & input:not([type="submit"]) {
         border: 1px solid var(--accent-color-util);
     }
-    
-    textarea{
+
+    textarea {
         resize: none;
         border: 1px solid var(--accent-color-util);
-        min-width: 80ch;
         min-height: 25ch;
-        &:focus-within{
+        &:focus-within {
             outline: 1.5px solid var(--accent-color-main);
         }
 
         margin-block: var(--spacing-sm);
     }
-    button[type="submit"]{
+    button[type="submit"] {
         cursor: pointer;
-        float: right;
-        color:var(--secondary-color);
+        max-width: 40ch;
+        align-self: flex-end;
+        color: var(--secondary-color);
         font-weight: 600;
-        background:var(--accent-color-main);
-        i{
-        color:var(--secondary-color);
+        background: var(--accent-color-main);
+        i {
+            color: var(--secondary-color);
             margin-right: 0.4em;
         }
     }

@@ -32,140 +32,6 @@ html {
 }
 
 /*
-    > Grid
-    > flex
-    > containers
-*/
-.page-navigation {
-  background: var(--primary-color);
-  padding: var(--spacing-reg);
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-}
-.page-navigation ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-medium);
-}
-
-.profile-sec {
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-}
-.profile-sec .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: var(--spacing-large);
-  gap: 7.875em;
-}
-.profile-sec .wrapper ul {
-  list-style: none;
-  display: flex;
-  gap: var(--spacing-reg);
-  margin-top: var(--spacing-large);
-}
-.profile-sec .wrapper ul a {
-  text-decoration: none;
-}
-
-.introduction {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.introduction p {
-  margin-top: var(--spacing-reg);
-  max-width: 70ch;
-}
-
-.skills-expertise {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.skills-expertise .column-section {
-  display: flex;
-  flex-direction: column;
-}
-.skills-expertise .column-section .partition:nth-of-type(1) {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--spacing-reg);
-  border-bottom: 1px solid var(--accent-color-util);
-  padding-block: var(--spacing-medium);
-}
-.skills-expertise .column-section .partition:nth-of-type(2) {
-  gap: var(--spacing-reg);
-  display: grid;
-  padding-top: var(--spacing-medium);
-  padding-bottom: var(--spacing-reg);
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-.skills-expertise .column-section .partition .card-skills {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.skills-expertise .column-section .partition .card-expertise {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.education {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.education h3 {
-  text-align: center;
-}
-.education section {
-  margin-top: var(--spacing-reg);
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--spacing-medium);
-}
-.education section .card {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-reg);
-}
-.education section .card div {
-  line-height: 1.5;
-}
-.education section .card div h4 {
-  font-size: var(--font-size-medium);
-}
-.education section .card div p {
-  color: var(--accent-color-util);
-}
-
-.contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-footer {
-  text-align: center;
-  padding: var(--spacing-reg);
-}
-footer * {
-  color: var(--accent-color-util);
-}
-
-/*
     > Navigation
     > card
     > footer 
@@ -173,12 +39,12 @@ footer * {
 
 */
 body {
+  position: relative;
   background: var(--primary-color);
 }
 body > div {
-  padding-left: var(--spacing-xl);
-  min-height: 100vh;
-  padding-right: var(--spacing-xl);
+  padding-inline: var(--spacing-reg);
+  padding-block: var(--spacing-reg);
 }
 
 .profile-image {
@@ -232,10 +98,12 @@ ul a:hover {
 .card-skills h5 {
   margin-top: var(--spacing-sm);
   font-weight: 300;
+  text-align: center;
   font-size: var(--font-size-medium);
   color: var(--accent-color-util);
 }
 .card-expertise {
+  text-align: center;
   cursor: pointer;
 }
 .card-expertise i {
@@ -253,15 +121,16 @@ ul a:hover {
 
 form {
   margin-top: var(--spacing-reg);
-}
-form input[type=text] {
-  min-width: 80ch;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
 }
 form input[type=text]:focus-within {
   outline: 1.5px solid var(--accent-color-main);
 }
-form > input, form textarea, form button {
-  display: block;
+form > input,
+form textarea,
+form button {
   border: none;
   outline: 1px var(--accent-color-main);
   border-radius: 4px;
@@ -274,7 +143,6 @@ form input:not([type=submit]) {
 form textarea {
   resize: none;
   border: 1px solid var(--accent-color-util);
-  min-width: 80ch;
   min-height: 25ch;
   margin-block: var(--spacing-sm);
 }
@@ -283,7 +151,8 @@ form textarea:focus-within {
 }
 form button[type=submit] {
   cursor: pointer;
-  float: right;
+  max-width: 40ch;
+  align-self: flex-end;
   color: var(--secondary-color);
   font-weight: 600;
   background: var(--accent-color-main);
@@ -291,6 +160,212 @@ form button[type=submit] {
 form button[type=submit] i {
   color: var(--secondary-color);
   margin-right: 0.4em;
+}
+
+/*
+    > Grid
+    > flex
+    > containers
+*/
+.page-navigation {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.page-navigation ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: var(--spacing-medium);
+  padding: var(--spacing-reg);
+  background: var(--primary-color);
+}
+
+.toggle-nav {
+  position: sticky;
+  top: 0;
+  display: none;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  background: var(--primary-color);
+  z-index: 911;
+  text-align: right;
+}
+.toggle-nav i {
+  font-size: var(--font-size-xl);
+}
+
+.profile-sec {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+.profile-sec .wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-medium);
+  gap: 7.875em;
+}
+.profile-sec .wrapper ul {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-reg);
+  margin-top: var(--spacing-large);
+}
+.profile-sec .wrapper ul a {
+  text-decoration: none;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--spacing-large);
+  justify-content: center;
+  align-items: center;
+}
+.introduction p {
+  margin-top: var(--spacing-reg);
+  max-width: 70ch;
+}
+
+.skills-expertise {
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--spacing-large);
+  align-items: center;
+  justify-content: center;
+}
+.skills-expertise h3 {
+  text-align: center;
+}
+.skills-expertise .column-section {
+  display: flex;
+  flex-direction: column;
+}
+.skills-expertise .column-section .partition:nth-of-type(1) {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-reg);
+  border-bottom: 1px solid var(--accent-color-util);
+  padding-block: var(--spacing-medium);
+}
+.skills-expertise .column-section .partition:nth-of-type(2) {
+  gap: var(--spacing-reg);
+  display: grid;
+  padding-top: var(--spacing-medium);
+  padding-bottom: var(--spacing-reg);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.skills-expertise .column-section .partition .card-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills-expertise .column-section .partition .card-expertise {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: var(--spacing-large);
+  align-items: center;
+}
+.education h3 {
+  text-align: center;
+}
+.education section {
+  margin-top: var(--spacing-reg);
+  display: grid;
+  gap: var(--spacing-medium);
+}
+.education section .card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-reg);
+}
+.education section .card div {
+  line-height: 1.5;
+}
+.education section .card div h4 {
+  font-size: var(--font-size-medium);
+}
+.education section .card div p {
+  color: var(--accent-color-util);
+}
+
+.contact {
+  display: flex;
+  padding-block: var(--spacing-large);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  padding: var(--spacing-reg);
+}
+footer * {
+  color: var(--accent-color-util);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .profile-sec .wrapper {
+    margin-top: var(--spacing-reg);
+    flex-direction: column;
+    gap: var(--spacing-reg);
+    text-align: center;
+  }
+  .profile-sec .wrapper ul {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .profile-sec .wrapper {
+    flex-direction: column;
+    gap: var(--spacing-reg);
+    text-align: center;
+    margin-top: var(--spacing-reg);
+  }
+  .profile-sec .wrapper h1 {
+    font-size: var(--font-size-xl);
+  }
+  .profile-sec .wrapper h3 {
+    font-size: var(--font-size-reg);
+  }
+  .profile-sec .wrapper ul {
+    margin-top: var(--spacing-reg);
+    justify-content: center;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .page-navigation {
+    position: relative;
+    display: none;
+  }
+  .page-navigation ul {
+    height: 100vh;
+    position: fixed;
+    box-shadow: 1px 2px 14px 0px rgba(0, 0, 0, 0.4);
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--primary-color);
+  }
+
+  .toggle-nav {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

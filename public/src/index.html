@@ -10,17 +10,20 @@
     <title>Site - Portfolio</title>
 </head>
 <body>
-    <nav class="page-navigation">
+  
+    <nav class="toggle-nav"><i class="fa-solid fa-bars" id="toggleNav"></i></nav>
+    <nav class="page-navigation" id="pageNav">
         <ul>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Introduction</a></li>
-            <li><a href="#">Skills and Expertise</a></li>
-            <li><a href="#">Education</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#skill">Skills and Expertise</a></li>
+            <li><a href="#educ">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
-    <div class="profile-sec">
+    
+   
+    <div class="profile-sec" id="profile">
         <div class="wrapper">
             <div class="profile-image">
                 <img src="assets/images/profile pic 1.jpg" alt="" class="img-holder-profile">
@@ -38,12 +41,12 @@
         </div>
     </div>
 
-    <div class="introduction">
+    <div class="introduction" id="intro">
         <h3>Introduction</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, velit repudiandae sapiente molestias nesciunt officia voluptates beatae explicabo quibusdam qui distinctio eum sequi minima at impedit tempora excepturi exercitationem unde repellat culpa eaque. Ullam vero, non nesciunt debitis reiciendis necessitatibus.</p>
     </div>
 
-    <div class="skills-expertise">
+    <div class="skills-expertise" id="skill">
         <h3>Skills and Expertise</h3>
         <div class="column-section">
             <div class="partition">
@@ -91,7 +94,7 @@
         </div>
     </div>
 
-    <div class="education">
+    <div class="education" id="educ">
         <h3>Education</h3>
         <section>
             <div class="card">
@@ -129,7 +132,7 @@
         </section>
     </div>
 
-    <div class="contact">
+    <div class="contact" id="contact">
         <h3>Email me</h3>
         <form action="" class="contact-form">
             <input type="text" placeholder="What do you want to talk about?">
