@@ -49,8 +49,8 @@ body > div {
 
 .profile-image {
   position: relative;
-  width: 24.5625em;
-  height: 24.5625em;
+  width: 24em;
+  height: 24em;
   overflow: hidden;
   border-radius: 50%;
 }
@@ -123,6 +123,7 @@ form {
   margin-top: var(--spacing-reg);
   display: flex;
   flex-direction: column;
+  gap: var(--spacing-sm);
   width: 70%;
 }
 form input[type=text]:focus-within {
@@ -144,7 +145,6 @@ form textarea {
   resize: none;
   border: 1px solid var(--accent-color-util);
   min-height: 25ch;
-  margin-block: var(--spacing-sm);
 }
 form textarea:focus-within {
   outline: 1.5px solid var(--accent-color-main);
@@ -168,20 +168,18 @@ form button[type=submit] i {
     > containers
 */
 .page-navigation {
-  position: sticky;
   top: 0;
   width: 100%;
   z-index: 10;
   background: var(--primary-color);
-  background: red;
   display: flex;
+  position: sticky;
   align-items: center;
 }
 .page-navigation .wrapper {
-  background: var(--primary-color);
   height: inherit;
-  padding: var(--spacing-reg);
   width: inherit;
+  padding: var(--spacing-sm);
   display: flex;
   position: relative;
 }
@@ -191,7 +189,6 @@ form button[type=submit] i {
   left: 0;
   top: 100%;
   box-shadow: 5px 0px 4px 0px rgba(0, 0, 0, 0.31);
-  padding: var(--spacing-reg);
   height: 100vh;
   list-style: none;
 }
@@ -227,7 +224,6 @@ form button[type=submit] i {
 .profile-sec {
   display: flex;
   justify-content: center;
-  min-height: 100vh;
 }
 .profile-sec .wrapper {
   display: flex;
@@ -248,7 +244,7 @@ form button[type=submit] i {
 .introduction {
   display: flex;
   flex-direction: column;
-  padding-block: var(--spacing-large);
+  padding-block: var(--spacing-medium);
   justify-content: center;
   align-items: center;
 }
@@ -260,7 +256,7 @@ form button[type=submit] i {
 .skills-expertise {
   display: flex;
   flex-direction: column;
-  padding-block: var(--spacing-large);
+  padding-block: var(--spacing-medium);
   align-items: center;
   justify-content: center;
 }
@@ -301,7 +297,7 @@ form button[type=submit] i {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-block: var(--spacing-large);
+  padding-block: var(--spacing-medium);
   align-items: center;
 }
 .education h3 {
@@ -329,7 +325,7 @@ form button[type=submit] i {
 
 .contact {
   display: flex;
-  padding-block: var(--spacing-large);
+  padding-block: var(--spacing-medium);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -347,10 +343,13 @@ footer * {
   .profile-sec .wrapper {
     margin-top: var(--spacing-reg);
     flex-direction: column;
+    align-items: center;
     gap: var(--spacing-reg);
     text-align: center;
+    position: static;
   }
   .profile-sec .wrapper ul {
+    position: static;
     justify-content: center;
   }
 }
@@ -358,6 +357,7 @@ footer * {
   .profile-sec .wrapper {
     flex-direction: column;
     gap: var(--spacing-reg);
+    align-items: center;
     text-align: center;
     margin-top: var(--spacing-reg);
   }
@@ -377,8 +377,14 @@ footer * {
   }
 }
 @media (min-width: 801px) {
-  .page-navigation .wrapper {
-    padding: var(--spacing-sm);
+  .page-navigation {
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background: var(--primary-color);
+    display: flex;
+    position: sticky;
+    align-items: center;
   }
   .page-navigation .wrapper #toggleNav {
     display: none;
