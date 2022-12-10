@@ -178,7 +178,7 @@ form button[type=submit] i {
   justify-content: center;
   list-style: none;
   gap: var(--spacing-medium);
-  padding: var(--spacing-reg);
+  padding: var(--spacing-medium);
   background: var(--primary-color);
 }
 
@@ -204,7 +204,7 @@ form button[type=submit] i {
 .profile-sec .wrapper {
   display: flex;
   justify-content: center;
-  margin-top: var(--spacing-medium);
+  margin-top: var(--spacing-sm);
   gap: 7.875em;
 }
 .profile-sec .wrapper ul {
